@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-div {
+            margin-bottom: 15px;
+        }
+        .form-div label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-div input, .form-div textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="index.php" method="post">
+            <div class="form-div">
+                <label for="name">Enter your Name</label>
+                <input type="text" name="name" id="name"><br>
+            </div>
+            <div class="form-div">
+                <label for="password">Enter Your Password</label>
+                <input type="password" name="password" id="password"><br>
+            </div>
+            <div class="form-div">
+                <label for="email">Enter Your Email</label>
+                <input type="email" name="email" id="email"><br>
+            </div>
+            <div class="form-div">
+                <label for="phone">Enter Your Phone Number</label>
+                <input type="tel" name="phone" id="phone"><br>
+            </div>
+            <div class="form-div">
+                <label for="address">Enter Your Address</label>
+                <input type="text" name="address" id="address"><br>
+            </div>
+            <div class="form-div">
+                <label for="track">Enter Your Track</label>
+                <input type="text" name="track" id="track" placeholder="open source"><br>
+            </div>
+            <div class="form-div">
+                <label for="courses">Select Your Courses</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="courses[]" value="js"> JavaScript</label>
+                    <label><input type="checkbox" name="courses[]" value="php"> PHP</label>
+                    <label><input type="checkbox" name="courses[]" value="html"> HTML</label>
+                </div>
+            </div>
+            <div class="form-div">
+                <label for="comments">Comments</label>
+                <textarea name="comments" id="comments" rows="4"></textarea><br>
+            </div>
+            <input type="submit">
+            <input type="reset">
+        </form>
+    </div>
+</body>
+</html>
